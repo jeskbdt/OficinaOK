@@ -1,0 +1,8 @@
+/* FALHA DIDÁTICA — formulário sem adaptação à largura da tela.
+   A largura fixa força rolagem horizontal, especialmente no celular.
+   Remova este stylesheet do index.html para comparar com a versão original. */
+.ticket-panel {
+  width: 900px;
+  min-width: 900px;
+  max-width: none;
+}

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <meta content="#f5efdf" name="theme-color"/>
+    <meta content="Grão — café bom começa na curiosidade. Demonstração de inscrição em uma oficina de café." name="description"/>
+    <title>
+      Grão — do grão à sua xícara
+    </title>
+    <link href="assets/cafe.svg" rel="icon" type="image/svg+xml"/>
+    <link href="assets/bootstrap.min.css" rel="stylesheet"/>
+    <link href="style.css" rel="stylesheet"/>
+    <script defer="" src="script.js">
+    </script>
+    <link href="account.css" rel="stylesheet"/>
+    <link href="ux-lab.css" rel="stylesheet"/>
+    <script defer="" src="../backend/client.js">
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#oficina">
+      Pular para o formulário
+    </a>
+    <header class="site-header shell">
+      <a aria-label="Grão, início" class="brand" href="./">
+        grão
+        <span class="brand-dot">
+          ●
+        </span>
+      </a>
+      <span class="header-note">
+        Café bom começa na curiosidade.
+      </span>
+      <nav aria-label="Navegação do site e acessos" class="nav-actions">
+        <a class="header-link" href="#oficina">
+          Sente com a gente
+          <span aria-hidden="true">
+            ↗
+          </span>
+        </a>
+        <a aria-label="Acessar administração" class="admin-link" data-admin-only hidden href="admin.php">
+          Admin
+        </a>
+        <a aria-label="Login de usuários" class="profile-link" href="login.html" title="Login de usuários">
+          <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
+            <circle cx="12" cy="8" r="3.5">
+            </circle>
+            <path d="M5 21v-2a7 7 0 0 1 14 0v2" stroke-linecap="round">
+            </path>
+          </svg>
+        </a>
+      </nav>
+    </header>
+    <main class="coffee-layout">
+      <!-- HERO: a xícara e o selo são ilustrações, não fotografias externas. -->
+      <section aria-labelledby="hero-title" class="coffee-hero">
+        <div class="coffee-copy">
+          <div class="eyebrow">
+            Oficinas para gente curiosa
+          </div>
+          <h1 id="hero-title">
+            Seu café.
+            <br/>
+            <em>
+              Outro nível.
+            </em>
+          </h1>
+          <p class="intro">
+            Tem um mundo inteiro dentro da sua xícara. Aprenda a descobrir aromas, acertar o preparo e transformar o café de todo dia.
+          </p>
+        </div>
+        <div class="coffee-stage">
+          <img alt="Vista de cima de uma xícara de café com latte art em forma de folha, pires e colher." height="390" src="assets/cafe.svg" width="650"/>
+          <div class="coffee-seal">
+            <span>
+              DA TEORIA
+            </span>
+            <strong>
+              à xícara
+            </strong>
+            <span>
+              COM AS SUAS MÃOS
+            </span>
+          </div>
+          <span class="coffee-scribble">
+            o seu novo
+            <br/>
+            ritual favorito.
+            <span aria-hidden="true">
+              ⤴
+            </span>
+          </span>
+        </div>
+        <div class="coffee-facts">
+          <div>
+            <strong>
+              2h
+            </strong>
+            <span>
+              de descobertas
+            </span>
+          </div>
+          <div>
+            <strong>
+              06
+            </strong>
+            <span>
+              pessoas por turma
+            </span>
+          </div>
+          <div>
+            <strong>
+              100%
+            </strong>
+            <span>
+              mão na massa
+            </span>
+          </div>
+        </div>
+      </section>
+      <!-- FORMULÁRIO: poucas perguntas, com explicação do que está incluso. -->
+      <section aria-labelledby="form-title" class="form-panel coffee-form" id="oficina">
+        <div class="coffee-form-inner">
+          <div class="form-topline">
+            <span class="section-label">
+              Puxe uma cadeira
+            </span>
+            <span class="step">
+              Experiência presencial
+            </span>
+          </div>
+          <h2 class="form-title" id="form-title">
+            Uma boa dose
+            <br/>
+            de conhecimento.
+          </h2>
+          <p class="form-description">
+            Escolha sua oficina. Café, materiais e boas conversas já estão na conta.
+          </p>
+          <form id="interest-form" novalidate="">
+            <div class="row g-3">
+              <div class="col-12" data-account-field>
+                <label class="form-label" for="name">
+                  Qual é o seu nome?
+                </label>
+                <input aria-describedby="name-error" autocomplete="name" class="form-control" data-required="Informe seu nome para identificar sua inscrição." id="name" maxlength="80" minlength="2" name="name" placeholder="Como vamos chamar você" required=""/>
+                <div class="invalid-feedback" id="name-error">
+                </div>
+              </div>
+              <div class="col-12" data-account-field>
+                <label class="form-label" for="email">
+                  Seu e-mail
+                </label>
+                <input aria-describedby="email-error" autocomplete="email" class="form-control" data-required="Informe um e-mail para a confirmação." id="email" maxlength="120" name="email" placeholder="voce@exemplo.com" required="" type="email"/>
+                <div class="invalid-feedback" id="email-error">
+                </div>
+              </div>
+              <div class="col-12">
+                <label class="form-label" for="workshop">
+                  O que você quer aprender?
+                </label>
+                <select aria-describedby="workshop-error" class="form-select" id="workshop" name="workshop" required="">
+                  <option value="coados">
+                    O universo dos coados · R$ 95
+                  </option>
+                  <option value="latte">
+                    Primeiros passos no latte art · R$ 140
+                  </option>
+                  <option value="sensorial">
+                    Sabores & aromas · R$ 110
+                  </option>
+                </select>
+                <div class="invalid-feedback" id="workshop-error">
+                </div>
+              </div>
+              <div class="col-12">
+                <label class="form-label" for="session">
+                  Escolha sua turma
+                </label>
+                <select aria-describedby="session-error" class="form-select" data-required="Escolha uma turma para participar." id="session" name="session" required="">
+                  <option value="">
+                    Qual horário combina com você?
+                  </option>
+                  <option value="manha">
+                    17 out. 2026 · das 9h às 11h
+                  </option>
+                  <option value="tarde">
+                    17 out. 2026 · das 14h às 16h
+                  </option>
+                  <option value="domingo">
+                    18 out. 2026 · das 9h às 11h
+                  </option>
+                </select>
+                <div class="invalid-feedback" id="session-error">
+                </div>
+              </div>
+              <div class="col-12 ux-note-priority">
+                <label class="form-label" for="note">
+                  Seu momento com o café
+                  <span class="optional">
+                    (opcional)
+                  </span>
+                </label>
+                <textarea aria-describedby="note-error" class="form-control" id="note" maxlength="240" name="note" placeholder="Iniciante, entusiasta ou já faz aquele café?" rows="2"></textarea>
+                <div class="invalid-feedback" id="note-error">
+                </div>
+              </div>
+            </div>
+            <div class="order-summary">
+              <div>
+                <span class="summary-label">
+                  Uma vaga, muitas descobertas
+                </span>
+                <span class="summary-caption">
+                  Materiais e degustação inclusos
+                </span>
+              </div>
+              <output aria-live="polite" class="total" data-total="">
+                R$ 95,00
+              </output>
+            </div>
+            <button class="btn submit-button" type="submit">
+              <span data-button-label="">
+                Quero uma cadeira
+              </span>
+              <span aria-hidden="true">
+                ↗
+              </span>
+            </button>
+            <p class="demo-note">
+              Oficina fictícia. Inscrição demonstrativa com dados de teste.
+            </p>
+            <div aria-atomic="true" aria-live="polite" class="alert feedback" id="form-feedback" role="status" tabindex="-1">
+            </div>
+          </form>
+          <p class="coffee-address">
+            <span aria-hidden="true">
+              ↳
+            </span>
+            No nosso ateliê. Na sua próxima boa memória.
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

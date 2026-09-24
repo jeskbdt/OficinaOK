@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <meta content="#edf1e8" name="theme-color"/>
+    <meta content="Vereda — experiências ao ar livre para respirar outro ritmo. Demonstração de reserva de trilhas." name="description"/>
+    <title>
+      Vereda — seu próximo respiro
+    </title>
+    <link href="assets/paisagem.svg" rel="icon" type="image/svg+xml"/>
+    <link href="assets/bootstrap.min.css" rel="stylesheet"/>
+    <link href="style.css" rel="stylesheet"/>
+    <script defer="" src="script.js">
+    </script>
+    <link href="account.css" rel="stylesheet"/>
+    <link href="ux-lab.css" rel="stylesheet"/>
+    <script defer="" src="../backend/client.js">
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#aventura">
+      Pular para o formulário
+    </a>
+    <header class="site-header shell">
+      <a aria-label="Vereda, início" class="brand" href="./">
+        <svg aria-hidden="true" fill="none" height="33" viewBox="0 0 29 33" width="29">
+          <path d="M3 28 14 5l12 23M8 20h13M14 5v23" stroke="currentColor" stroke-linecap="round" stroke-width="2.5">
+          </path>
+        </svg>
+        vereda
+        <span class="brand-dot">
+          ®
+        </span>
+      </a>
+      <span class="header-note">
+        Menos pressa. Mais caminho.
+      </span>
+      <nav aria-label="Navegação do site e acessos" class="nav-actions">
+        <a class="header-link" href="#aventura">
+          Encontre sua trilha
+          <span aria-hidden="true">
+            ↗
+          </span>
+        </a>
+        <a aria-label="Acessar administração" class="admin-link" data-admin-only hidden href="admin.php">
+          Admin
+        </a>
+        <a aria-label="Login de usuários" class="profile-link" href="login.html" title="Login de usuários">
+          <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
+            <circle cx="12" cy="8" r="3.5">
+            </circle>
+            <path d="M5 21v-2a7 7 0 0 1 14 0v2" stroke-linecap="round">
+            </path>
+          </svg>
+        </a>
+      </nav>
+    </header>
+    <main class="shell">
+      <div class="nature-layout">
+        <!-- HERO: ilustração vetorial local, sem dependência de imagens externas. -->
+        <section aria-labelledby="hero-title" class="nature-hero">
+          <div class="eyebrow">
+            Experiências lá fora
+          </div>
+          <h1 id="hero-title">
+            Um respiro.
+            <br/>
+            <em>
+              Fora da rotina.
+            </em>
+          </h1>
+          <p class="intro">
+            Troque o barulho pelo vento nas árvores.
+            <br/>
+            Pequenos grupos, caminhos bonitos e tempo para estar presente.
+          </p>
+          <div class="landscape-stage">
+            <img alt="Ilustração de montanhas verdes, sol dourado, uma trilha sinuosa e pinheiros junto a um lago." height="410" src="assets/paisagem.svg" width="620"/>
+            <div class="landscape-label">
+              <span aria-hidden="true" class="location-dot">
+              </span>
+              <span>
+                Seu próximo lugar favorito.
+              </span>
+              <span aria-hidden="true">
+                ↗
+              </span>
+            </div>
+            <span aria-hidden="true" class="round-seal">
+              VÁ COM
+              <br/>
+              <strong>
+                calma.
+              </strong>
+            </span>
+          </div>
+          <div class="nature-facts">
+            <span>
+              <b aria-hidden="true">
+                ↟
+              </b>
+              Guia local incluso
+            </span>
+            <span>
+              <b aria-hidden="true">
+                ◷
+              </b>
+              No seu ritmo
+            </span>
+            <span>
+              <b aria-hidden="true">
+                ☼
+              </b>
+              Grupos pequenos
+            </span>
+          </div>
+        </section>
+        <!-- FORMULÁRIO: a data é fictícia e pode ser alterada no HTML. -->
+        <section aria-labelledby="form-title" class="form-panel nature-form" id="aventura">
+          <div class="form-topline">
+            <span class="section-label">
+              O caminho começa aqui
+            </span>
+            <span aria-hidden="true" class="leaf-icon">
+              ↟
+            </span>
+          </div>
+          <h2 class="form-title" id="form-title">
+            Vamos sair um pouco?
+          </h2>
+          <p class="form-description">
+            Escolha a experiência e seu melhor dia. A gente cuida do caminho.
+          </p>
+          <form id="interest-form" novalidate="">
+            <div class="row g-3">
+              <div class="col-12" data-account-field>
+                <label class="form-label" for="name">
+                  Seu nome
+                </label>
+                <input aria-describedby="name-error" autocomplete="name" class="form-control" data-required="Informe seu nome para a reserva." id="name" maxlength="80" minlength="2" name="name" placeholder="Como você se chama?" required=""/>
+                <div class="invalid-feedback" id="name-error">
+                </div>
+              </div>
+              <div class="col-12" data-account-field>
+                <label class="form-label" for="email">
+                  E-mail de contato
+                </label>
+                <input aria-describedby="email-error" autocomplete="email" class="form-control" data-required="Informe um e-mail para a confirmação." id="email" maxlength="120" name="email" placeholder="voce@exemplo.com" required="" type="email"/>
+                <div class="invalid-feedback" id="email-error">
+                </div>
+              </div>
+              <div class="col-12">
+                <label class="form-label" for="trail">
+                  Qual caminho combina com você?
+                </label>
+                <select aria-describedby="trail-help trail-error" class="form-select" id="trail" name="trail" required="">
+                  <option value="bosque">
+                    Trilha do Bosque · R$ 85 / pessoa
+                  </option>
+                  <option value="mirante">
+                    Caminho do Mirante · R$ 120 / pessoa
+                  </option>
+                  <option value="aguas">
+                    Rota das Águas · R$ 150 / pessoa
+                  </option>
+                </select>
+                <div class="invalid-feedback" id="trail-error">
+                </div>
+                <p class="field-help mb-0" data-trail-info="" id="trail-help">
+                  Bosque: 3 km · 2 horas · nível leve.
+                </p>
+              </div>
+              <div class="col-8">
+                <label class="form-label" for="date">
+                  Dia da experiência
+                </label>
+                <select aria-describedby="date-error" class="form-select" data-required="Escolha uma data para a trilha." id="date" name="date" required="">
+                  <option value="">
+                    Escolha um dia
+                  </option>
+                  <option value="2026-10-10">
+                    10 de outubro de 2026
+                  </option>
+                  <option value="2026-10-17">
+                    17 de outubro de 2026
+                  </option>
+                  <option value="2026-10-24">
+                    24 de outubro de 2026
+                  </option>
+                </select>
+                <div class="invalid-feedback" id="date-error">
+                </div>
+              </div>
+              <div class="col-4">
+                <label class="form-label" for="quantity">
+                  Pessoas
+                </label>
+                <select aria-describedby="quantity-error" class="form-select" id="quantity" name="quantity" required="">
+                  <option value="1">
+                    1 pessoa
+                  </option>
+                  <option value="2">
+                    2 pessoas
+                  </option>
+                  <option value="3">
+                    3 pessoas
+                  </option>
+                  <option value="4">
+                    4 pessoas
+                  </option>
+                  <option value="5">
+                    5 pessoas
+                  </option>
+                  <option value="6">
+                    6 pessoas
+                  </option>
+                </select>
+                <div class="invalid-feedback" id="quantity-error">
+                </div>
+              </div>
+              <div class="col-12">
+                <label class="form-label" for="note">
+                  Quer deixar um recado?
+                  <span class="optional">
+                    (opcional)
+                  </span>
+                </label>
+                <input aria-describedby="note-error" class="form-control" id="note" maxlength="240" name="note" placeholder="Ex.: é minha primeira trilha"/>
+                <div class="invalid-feedback" id="note-error">
+                </div>
+              </div>
+            </div>
+            <div class="order-summary">
+              <div>
+                <span class="summary-label">
+                  Sua experiência
+                </span>
+                <span class="summary-caption">
+                  Guia incluso · transporte por sua conta
+                </span>
+              </div>
+              <output aria-live="polite" class="total" data-total="">
+                R$ 85,00
+              </output>
+            </div>
+            <button class="btn submit-button" type="submit">
+              <span data-button-label="">
+                Reservar meu respiro
+              </span>
+              <span aria-hidden="true">
+                ↗
+              </span>
+            </button>
+            <p class="demo-note">
+              Experiências fictícias. Use dados de teste na reserva.
+            </p>
+            <div aria-atomic="true" aria-live="polite" class="alert feedback" id="form-feedback" role="status" tabindex="-1">
+            </div>
+          </form>
+        </section>
+      </div>
+      <p class="endnote">
+        <span>
+          VEREDA · A NATUREZA NO SEU TEMPO.
+        </span>
+        <span>
+          Deixe só pegadas. Leve boas histórias.
+        </span>
+      </p>
+    </main>
+  </body>
+</html>

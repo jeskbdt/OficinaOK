@@ -1,0 +1,152 @@
+/* PERSONALIZE AQUI: identidade visual da Margem. */
+:root {
+  --paper: #f4f0e6;
+  --ink: #303b2f;
+  --accent: #763e41;
+  --button-ink: #fff8ed;
+  --muted: #6c6b5e;
+  --line: #d8d6c8;
+  --field: #fcfbf5;
+  --focus: #763e411c;
+  --radius: 2px;
+  --font-body: Arial, Helvetica, sans-serif;
+  --font-display: Georgia, 'Times New Roman', serif;
+}
+
+/* OFICINA: personalize as variáveis no início do arquivo.
+   Os estilos abaixo cuidam do formulário, do teclado e das telas pequenas. */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: var(--font-body); color: var(--ink); background: var(--paper); -webkit-font-smoothing: antialiased; }
+::selection { background: var(--accent); color: var(--button-ink); }
+a { color: inherit; }
+button, input, select, textarea { font: inherit; }
+button, a, input, select, textarea { -webkit-tap-highlight-color: transparent; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 5px; }
+.skip-link { position: fixed; left: 16px; top: -100px; z-index: 100; padding: 12px 20px; background: var(--ink); color: var(--paper); }
+.skip-link:focus { top: 16px; }
+.shell { width: min(1280px, calc(100% - 96px)); margin-inline: auto; }
+.site-header { min-height: 106px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.brand { text-decoration: none; display: inline-flex; align-items: center; gap: 12px; }
+.header-note, .eyebrow, .section-label { font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+.header-link { text-decoration: none; font-size: 13px; font-weight: 600; padding: 10px 0; border-bottom: 1px solid currentColor; }
+.header-link span { margin-left: 22px; }
+.eyebrow { display: flex; align-items: center; gap: 10px; margin-bottom: 24px; }
+.eyebrow::before { content: ''; width: 7px; height: 7px; flex: 0 0 7px; border-radius: 50%; background: currentColor; }
+h1, h2, p { margin-top: 0; }
+h1 { font-family: var(--font-display); font-weight: 400; letter-spacing: -.055em; line-height: 1.02; }
+.intro { font-size: 16px; line-height: 1.7; max-width: 380px; }
+.hero-link { display: inline-flex; align-items: center; gap: 28px; text-decoration: none; font-size: 13px; font-weight: 700; padding: 12px 0; border-bottom: 1px solid currentColor; }
+.hero-link:hover, .header-link:hover { opacity: .75; }
+.form-panel { scroll-margin-top: 24px; }
+.form-topline { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 22px; }
+.step { font-size: 10px; text-transform: uppercase; letter-spacing: .1em; opacity: .65; }
+.form-title { font-family: var(--font-display); font-size: 32px; letter-spacing: -.035em; margin-bottom: 8px; line-height: 1.1; }
+.form-description { font-size: 13px; line-height: 1.6; color: var(--muted); margin-bottom: 26px; }
+.form-label { display: block; font-size: 12px; font-weight: 600; margin-bottom: 7px; }
+.optional { font-size: 11px; font-weight: 400; color: var(--muted); }
+.form-control, .form-select { min-height: 47px; border: 1px solid var(--line); border-radius: var(--radius); padding: 11px 13px; background-color: var(--field); color: var(--ink); font-size: 13px; box-shadow: none; }
+.form-control::placeholder { color: var(--muted); opacity: .8; }
+.form-control:focus, .form-select:focus { color: var(--ink); background-color: var(--field); border-color: var(--accent); box-shadow: 0 0 0 3px var(--focus); }
+textarea.form-control { min-height: 76px; resize: vertical; }
+.field-help { font-size: 11px; color: var(--muted); margin-top: 6px; }
+.invalid-feedback { font-size: 11px; line-height: 1.5; color: var(--error, #ad2636); }
+.form-control.is-invalid, .form-select.is-invalid { border-color: var(--error, #ad2636); background-image: none; }
+.form-check { display: flex; align-items: flex-start; gap: 9px; padding-left: 0; margin: 4px 0; }
+.form-check-input { flex: 0 0 16px; float: none !important; margin: 2px 0 0 !important; border-color: var(--line); }
+.form-check-input:checked { background-color: var(--accent); border-color: var(--accent); }
+.form-check-label { font-size: 11px; line-height: 1.6; color: var(--muted); }
+.form-check-input.is-invalid ~ .form-check-label { color: var(--error, #ad2636); }
+.order-summary { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 0; margin-top: 18px; border-top: 1px solid var(--line); }
+.summary-label { font-size: 12px; font-weight: 600; display: block; }
+.summary-caption { font-size: 10px; display: block; color: var(--muted); margin-top: 4px; }
+.total { white-space: nowrap; font-family: var(--font-display); font-size: 28px; letter-spacing: -.04em; }
+.submit-button { --bs-btn-active-bg: var(--accent); --bs-btn-active-color: var(--button-ink); --bs-btn-active-border-color: var(--accent); --bs-btn-hover-border-color: var(--accent); width: 100%; min-height: 50px; border: 1px solid var(--accent); border-radius: var(--radius); padding: 13px 17px; background: var(--accent); color: var(--button-ink); font-size: 13px; font-weight: 700; display: flex; align-items: center; justify-content: space-between; gap: 14px; transition: transform .2s, filter .2s; }
+.submit-button:hover { background: var(--accent); color: var(--button-ink); filter: brightness(.93); transform: translateY(-2px); }
+.submit-button:focus-visible { background: var(--accent); color: var(--button-ink); }
+.submit-button:disabled { cursor: wait; background: var(--accent); color: var(--button-ink); opacity: .65; }
+.demo-note { margin: 13px 0 0; text-align: center; font-size: 10px; color: var(--muted); line-height: 1.5; }
+.feedback { margin-top: 16px; margin-bottom: 0; border: 1px solid currentColor; border-radius: var(--radius); background: var(--field); color: var(--ink); font-size: 13px; line-height: 1.6; padding: 14px; }
+.feedback[data-state='error'] { color: var(--error, #ad2636); }
+.feedback:empty { display: none; }
+.endnote { display: flex; justify-content: space-between; gap: 20px; padding: 24px 0; margin: 0; font-size: 10px; letter-spacing: .06em; color: var(--muted); }
+@media (max-width: 1100px) { .shell { width: calc(100% - 56px); } }
+@media (max-width: 767px) {
+  .shell { width: calc(100% - 40px); }
+  .site-header { min-height: 84px; gap: 12px; }
+  .header-note { display: none; }
+  .header-link { font-size: 11px; }
+  .header-link span { margin-left: 10px; }
+  .eyebrow { font-size: 10px; }
+  .form-control, .form-select { font-size: 16px; }
+  .endnote { font-size: 9px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+/* HERO — livros, respiro e tipografia editorial. */
+.site-header { border-bottom: 1px solid var(--line); }
+.brand { font-family: var(--font-display); font-size: 35px; letter-spacing: -.055em; line-height: 1; }
+.brand-symbol { display: grid; place-items: center; width: 42px; height: 46px; font-size: 33px; background: var(--accent); color: #fff4df; padding-bottom: 6px; }
+.brand-caption { display: block; font-family: var(--font-body); font-size: 7px; letter-spacing: .19em; margin-top: 7px; }
+.header-note { color: var(--muted); font-size: 9px; }
+.book-layout { display: grid; grid-template-columns: 1.35fr 1fr; gap: 76px; padding-top: 54px; align-items: start; }
+.book-hero { padding-top: 12px; position: relative; }
+.eyebrow { color: var(--accent); font-size: 10px; }
+h1 { font-size: clamp(49px, 5.2vw, 76px); margin-bottom: 24px; }
+h1 em { font-weight: 400; color: var(--accent); }
+.intro { color: #636657; font-size: 14px; max-width: 355px; margin-bottom: 13px; }
+.hero-link { font-size: 11px; }
+.book-showcase { position: relative; margin-top: 10px; height: 296px; }
+.book-showcase img { width: 90%; height: auto; position: absolute; right: -31px; bottom: 5px; }
+.curator-note { position: absolute; left: 0; top: 38px; z-index: 1; }
+.curator-note p { font-family: var(--font-display); font-size: 13px; font-style: italic; line-height: 1.4; margin: 5px 0; }
+.small-star { font-size: 30px; color: var(--accent); }
+.hand-arrow { display: block; font-size: 38px; margin-left: 19px; }
+.edition { position: absolute; bottom: 0; left: 0; font-size: 8px; letter-spacing: .18em; color: var(--muted); }
+.book-form { padding: 32px; border: 1px solid #d4d4c5; background: #ebece1; position: relative; }
+.book-form::before { content: ''; position: absolute; width: 32px; height: 43px; right: 30px; top: -1px; background: var(--accent); clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 80%, 0 100%); }
+.book-form .form-topline { margin-right: 42px; flex-wrap: wrap; gap: 7px; }
+.book-form .section-label { font-size: 9px; }
+.book-form .step { font-size: 8px; }
+.book-form .form-title { font-size: 34px; }
+.endnote { border-top: 1px solid var(--line); margin-top: 35px; }
+@media (max-width: 1100px) {
+  .book-layout { gap: 32px; grid-template-columns: 1.15fr 1fr; }
+  .book-form { padding: 26px; }
+  .book-showcase { height: 270px; }
+  .book-showcase img { width: 100%; right: -18px; }
+  .curator-note { top: 8px; }
+  .curator-note p { font-size: 11px; }
+}
+@media (max-width: 900px) {
+  .book-layout { grid-template-columns: 1fr; gap: 30px; max-width: 660px; margin: auto; }
+  .book-hero { min-height: 570px; }
+  h1 { font-size: 68px; }
+  .book-showcase { height: 260px; margin-top: 0; }
+  .book-showcase img { width: 420px; max-width: 85%; right: 0; }
+  .curator-note { top: 34px; }
+  .book-form .form-topline { flex-wrap: nowrap; }
+}
+@media (max-width: 480px) {
+  .brand { font-size: 29px; }
+  .brand-symbol { width: 34px; height: 39px; font-size: 29px; }
+  .brand-caption { font-size: 6px; }
+  .book-layout { padding-top: 25px; }
+  h1 { font-size: 52px; }
+  .book-hero { min-height: auto; }
+  .book-showcase { height: 245px; }
+  .book-showcase img { max-width: 100%; bottom: 0; right: -10px; }
+  .curator-note { top: 9px; }
+  .curator-note p { display: none; }
+  .hand-arrow { font-size: 27px; }
+  .book-form { padding: 24px 20px; }
+  .book-form .form-title { font-size: 30px; }
+  .book-form .form-topline { flex-wrap: wrap; }
+  .endnote { margin-top: 25px; }
+}
+
+/* Permite que colunas com textos longos encolham em telas estreitas. */
+.book-layout > *, .street-hero > *, .street-form-inner > *, .festival-layout > *, .nature-layout > *, .coffee-layout > * { min-width: 0; }

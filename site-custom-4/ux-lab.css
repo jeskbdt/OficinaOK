@@ -1,0 +1,32 @@
+/* FALHA DIDÁTICA — semântica visual do feedback invertida.
+   Sucesso recebe vermelho e X; erro recebe verde e um sinal de confirmação.
+   O resultado e o texto reais da simulação permanecem os mesmos.
+   Remova este stylesheet do index.html para comparar com a versão original. */
+.nature-form .feedback[data-state] {
+  padding: 22px;
+  border-width: 4px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.nature-form .feedback[data-state='success'] {
+  background: #ffe2e2;
+  color: #a20e20;
+  border-color: #d51c32;
+}
+
+.nature-form .feedback[data-state='error'] {
+  background: #d9f8dd;
+  color: #145c2a;
+  border-color: #20813b;
+}
+
+.nature-form .feedback[data-state]::before {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 36px;
+  line-height: 1;
+}
+
+.nature-form .feedback[data-state='success']::before { content: '✕'; }
+.nature-form .feedback[data-state='error']::before { content: '✓'; }

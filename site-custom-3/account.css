@@ -1,0 +1,79 @@
+/* Telas de conta: reutilizam a identidade e as variáveis de style.css. */
+.nav-actions { display: flex; align-items: center; gap: 20px; }
+.profile-link { display: grid; place-items: center; width: 44px; height: 44px; flex-shrink: 0; border: 1px solid var(--line); border-radius: 50%; color: var(--ink); text-decoration: none; }
+.profile-link:hover, .profile-link[aria-current='page'] { background: var(--accent); color: var(--button-ink); border-color: var(--accent); }
+.profile-link svg { width: 21px; height: 21px; }
+.account-page .site-header { border-bottom: 1px solid var(--line); }
+.account-page h1 { font-size: clamp(38px, 4.2vw, 64px); line-height: 1.06; letter-spacing: -.045em; margin: 0 0 20px; }
+.account-page h1 em { color: var(--accent); font-weight: inherit; }
+.account-page .eyebrow { margin-bottom: 24px; }
+.login-layout { display: grid; grid-template-columns: 1.15fr 1fr; gap: 80px; align-items: center; padding-block: 56px; min-height: calc(100vh - 160px); }
+.login-story, .login-card { min-width: 0; }
+.login-story .intro { color: var(--muted); font-size: 15px; }
+.login-art { display: block; width: 100%; height: 275px; object-fit: contain; margin-top: 22px; }
+.login-card { background: var(--field); padding: 38px; border: 1px solid var(--line); border-radius: var(--radius); }
+.login-card h2 { font: 34px var(--font-display); letter-spacing: -.035em; margin-bottom: 10px; }
+.login-card .form-control { background: var(--paper); }
+.login-card .form-description { font-size: 14px; }
+.password-field { position: relative; }
+.password-field input { padding-right: 88px; }
+.password-toggle { position: absolute; right: 8px; top: 6px; min-height: 35px; border: 0; background: transparent; color: var(--ink); font-size: 12px; padding: 6px 9px; }
+.login-card .submit-button { margin-top: 26px; }
+.login-card .demo-note { font-size: 12px; line-height: 1.7; margin-top: 20px; }
+.account-back { display: inline-block; margin-top: 25px; text-decoration: none; font-size: 13px; border-bottom: 1px solid var(--line); padding-bottom: 5px; }
+.account-footer { border-top: 1px solid var(--line); padding-block: 21px; color: var(--muted); font-size: 11px; display: flex; justify-content: space-between; gap: 16px; }
+.admin-main { padding-block: 42px; }
+.admin-heading { display: flex; justify-content: space-between; align-items: center; gap: 24px; margin-bottom: 30px; }
+.admin-heading h1 { font-size: 44px; margin-bottom: 10px; }
+.admin-heading p { color: var(--muted); margin-bottom: 0; font-size: 14px; }
+.demo-badge { white-space: nowrap; padding: 9px 12px; border: 1px solid var(--line); border-radius: var(--radius); font-size: 11px; letter-spacing: .04em; }
+.metric-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 18px; margin-bottom: 30px; }
+.metric { padding: 25px; background: var(--field); border: 1px solid var(--line); border-radius: var(--radius); }
+.metric > span { display: block; color: var(--muted); font-size: 12px; }
+.metric strong { display: block; margin-top: 10px; font: 35px var(--font-display); letter-spacing: -.04em; }
+.admin-list { border: 1px solid var(--line); border-radius: var(--radius); background: var(--field); overflow: hidden; }
+.list-top { padding: 24px; display: flex; justify-content: space-between; align-items: center; gap: 25px; flex-wrap: wrap; }
+.list-top h2 { font: 26px var(--font-display); letter-spacing: -.03em; margin-bottom: 6px; }
+.list-top p { font-size: 12px; color: var(--muted); margin: 0; }
+.list-filters { display: flex; gap: 12px; align-items: flex-end; }
+.list-filters .form-control { width: 235px; }
+.list-filters .form-select { width: 175px; }
+.account-page .table { --bs-table-bg: transparent; --bs-table-color: var(--ink); --bs-table-border-color: var(--line); margin: 0; }
+.account-page .table th { font-size: 10px; letter-spacing: .08em; text-transform: uppercase; background: var(--paper); padding: 16px 24px; white-space: nowrap; }
+.account-page .table td { font-size: 13px; padding: 20px 24px; vertical-align: middle; }
+.account-page .table td small { display: block; color: var(--muted); font-size: 11px; margin-top: 5px; }
+.account-page .table td:nth-child(3) { white-space: nowrap; }
+.account-page .table td:nth-child(2) { min-width: 180px; }
+.status-pill { display: inline-flex; padding: 6px 9px; font-size: 11px; border-radius: 30px; white-space: nowrap; background: #f9e9bf; color: #70521b; }
+.status-pill[data-status='confirmed'] { background: #e0efdf; color: #285334; }
+.confirm-button { border: 1px solid var(--line); border-radius: var(--radius); padding: 9px 12px; background: var(--paper); color: var(--ink); font-size: 12px; white-space: nowrap; }
+.confirm-button:hover:enabled { background: var(--accent); color: var(--button-ink); border-color: var(--accent); }
+.confirm-button:disabled { opacity: .6; }
+.empty-message { text-align: center; padding: 30px; margin: 0; color: var(--muted); }
+.admin-note { font-size: 12px; color: var(--muted); margin: 20px 0 0; line-height: 1.6; }
+.admin-feedback { margin-top: 16px; font-size: 13px; }
+.admin-feedback:empty { display: none; }
+@media(max-width: 1050px) { .login-layout { gap: 35px; } .login-card { padding: 28px; } .site-header .header-note { display: none; } }
+@media(max-width: 767px) {
+ .nav-actions { gap: 12px; } .login-layout { grid-template-columns: 1fr; padding-block: 32px; gap: 24px; }
+ .login-art { height: 205px; } .login-story .intro { max-width: 100%; } .login-card { padding: 25px; }
+ .admin-heading { align-items: flex-start; flex-direction: column; gap: 16px; } .admin-heading h1 { font-size: 36px; }
+ .metric-grid { gap: 10px; } .metric { padding: 16px 12px; } .metric strong { font-size: 25px; } .metric > span { font-size: 10px; }
+ .list-top { padding: 20px; } .list-filters { width: 100%; flex-wrap: wrap; } .list-filters > div { flex: 1 1 150px; }
+ .list-filters .form-control, .list-filters .form-select { width: 100%; } .account-footer { font-size: 10px; }
+}
+@media(max-width: 420px) { .site-header:not(.account-header) { flex-wrap: wrap; padding-block: 12px; } .site-header:not(.account-header) .nav-actions { margin-left: auto; } .metric-grid { grid-template-columns: 1fr; } .metric { display: flex; align-items: center; justify-content: space-between; } .metric strong { margin: 0; } }
+
+/* Acabamento do tema PULSO. */
+ .login-card { --paper: #faead9; --field: #f5dec8; --ink: #302539; --muted: #786256; --line: #ceb5a1; --accent: #302039; --button-ink: #fff0dd; background: var(--field); color: var(--ink); border-radius: 14px; border-bottom: 3px dashed #ac8c7b; } .login-card .section-label { color: var(--ink); } .account-page h1 { font-weight: 800; } .admin-heading h1 { color: var(--accent); } .metric { border-top: 3px solid var(--accent); } 
+
+/* O botão público só aparece após a confirmação da permissão pelo servidor. */
+.admin-link { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 10px 15px; border: 1px solid var(--line); border-radius: var(--radius); color: var(--ink); text-decoration: none; font-size: 12px; font-weight: 600; }
+.admin-link[hidden] { display: none; }
+.admin-link:hover, .admin-link[aria-current="page"] { background: var(--accent); border-color: var(--accent); color: var(--button-ink); }
+@media (max-width: 600px) {
+  .site-header { flex-wrap: wrap; padding-block: 14px; }
+  .nav-actions { margin-left: auto; flex-wrap: wrap; justify-content: flex-end; gap: 10px; }
+}
+
+.account-session { display:flex; gap:16px; align-items:center; justify-content:flex-end; padding-block:12px; font-size:12px; color:var(--muted); flex-wrap:wrap; }

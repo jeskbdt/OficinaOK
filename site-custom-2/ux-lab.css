@@ -1,0 +1,11 @@
+/* FALHA DIDÁTICA — alvo de clique pequeno demais para a ação principal.
+   O botão continua funcionando, mas fica difícil de localizar e tocar.
+   Remova este stylesheet do index.html para comparar com a versão original. */
+#interest-form .submit-button {
+  width: fit-content;
+  min-height: 18px;
+  padding: 1px 4px;
+  gap: 3px;
+  font-size: 7px;
+  line-height: 1;
+}

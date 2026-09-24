@@ -1,0 +1,170 @@
+/* PERSONALIZE AQUI: identidade visual da RUÍDO. */
+:root {
+  --paper: #f2f1e9;
+  --ink: #20221c;
+  --accent: #d9ff43;
+  --button-ink: #20221c;
+  --muted: #626458;
+  --line: #aeb1a1;
+  --field: #fafbf3;
+  --focus: #a3bd3940;
+  --radius: 0px;
+  --font-body: Arial, Helvetica, sans-serif;
+  --font-display: Impact, 'Arial Narrow', Arial, sans-serif;
+}
+
+/* OFICINA: personalize as variáveis no início do arquivo.
+   Os estilos abaixo cuidam do formulário, do teclado e das telas pequenas. */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: var(--font-body); color: var(--ink); background: var(--paper); -webkit-font-smoothing: antialiased; }
+::selection { background: var(--accent); color: var(--button-ink); }
+a { color: inherit; }
+button, input, select, textarea { font: inherit; }
+button, a, input, select, textarea { -webkit-tap-highlight-color: transparent; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 5px; }
+.skip-link { position: fixed; left: 16px; top: -100px; z-index: 100; padding: 12px 20px; background: var(--ink); color: var(--paper); }
+.skip-link:focus { top: 16px; }
+.shell { width: min(1280px, calc(100% - 96px)); margin-inline: auto; }
+.site-header { min-height: 106px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.brand { text-decoration: none; display: inline-flex; align-items: center; gap: 12px; }
+.header-note, .eyebrow, .section-label { font-size: 11px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; }
+.header-link { text-decoration: none; font-size: 13px; font-weight: 600; padding: 10px 0; border-bottom: 1px solid currentColor; }
+.header-link span { margin-left: 22px; }
+.eyebrow { display: flex; align-items: center; gap: 10px; margin-bottom: 24px; }
+.eyebrow::before { content: ''; width: 7px; height: 7px; flex: 0 0 7px; border-radius: 50%; background: currentColor; }
+h1, h2, p { margin-top: 0; }
+h1 { font-family: var(--font-display); font-weight: 400; letter-spacing: -.055em; line-height: 1.02; }
+.intro { font-size: 16px; line-height: 1.7; max-width: 380px; }
+.hero-link { display: inline-flex; align-items: center; gap: 28px; text-decoration: none; font-size: 13px; font-weight: 700; padding: 12px 0; border-bottom: 1px solid currentColor; }
+.hero-link:hover, .header-link:hover { opacity: .75; }
+.form-panel { scroll-margin-top: 24px; }
+.form-topline { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 22px; }
+.step { font-size: 10px; text-transform: uppercase; letter-spacing: .1em; opacity: .65; }
+.form-title { font-family: var(--font-display); font-size: 32px; letter-spacing: -.035em; margin-bottom: 8px; line-height: 1.1; }
+.form-description { font-size: 13px; line-height: 1.6; color: var(--muted); margin-bottom: 26px; }
+.form-label { display: block; font-size: 12px; font-weight: 600; margin-bottom: 7px; }
+.optional { font-size: 11px; font-weight: 400; color: var(--muted); }
+.form-control, .form-select { min-height: 47px; border: 1px solid var(--line); border-radius: var(--radius); padding: 11px 13px; background-color: var(--field); color: var(--ink); font-size: 13px; box-shadow: none; }
+.form-control::placeholder { color: var(--muted); opacity: .8; }
+.form-control:focus, .form-select:focus { color: var(--ink); background-color: var(--field); border-color: var(--accent); box-shadow: 0 0 0 3px var(--focus); }
+textarea.form-control { min-height: 76px; resize: vertical; }
+.field-help { font-size: 11px; color: var(--muted); margin-top: 6px; }
+.invalid-feedback { font-size: 11px; line-height: 1.5; color: var(--error, #ad2636); }
+.form-control.is-invalid, .form-select.is-invalid { border-color: var(--error, #ad2636); background-image: none; }
+.form-check { display: flex; align-items: flex-start; gap: 9px; padding-left: 0; margin: 4px 0; }
+.form-check-input { flex: 0 0 16px; float: none !important; margin: 2px 0 0 !important; border-color: var(--line); }
+.form-check-input:checked { background-color: var(--accent); border-color: var(--accent); }
+.form-check-label { font-size: 11px; line-height: 1.6; color: var(--muted); }
+.form-check-input.is-invalid ~ .form-check-label { color: var(--error, #ad2636); }
+.order-summary { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 0; margin-top: 18px; border-top: 1px solid var(--line); }
+.summary-label { font-size: 12px; font-weight: 600; display: block; }
+.summary-caption { font-size: 10px; display: block; color: var(--muted); margin-top: 4px; }
+.total { white-space: nowrap; font-family: var(--font-display); font-size: 28px; letter-spacing: -.04em; }
+.submit-button { --bs-btn-active-bg: var(--accent); --bs-btn-active-color: var(--button-ink); --bs-btn-active-border-color: var(--accent); --bs-btn-hover-border-color: var(--accent); width: 100%; min-height: 50px; border: 1px solid var(--accent); border-radius: var(--radius); padding: 13px 17px; background: var(--accent); color: var(--button-ink); font-size: 13px; font-weight: 700; display: flex; align-items: center; justify-content: space-between; gap: 14px; transition: transform .2s, filter .2s; }
+.submit-button:hover { background: var(--accent); color: var(--button-ink); filter: brightness(.93); transform: translateY(-2px); }
+.submit-button:focus-visible { background: var(--accent); color: var(--button-ink); }
+.submit-button:disabled { cursor: wait; background: var(--accent); color: var(--button-ink); opacity: .65; }
+.demo-note { margin: 13px 0 0; text-align: center; font-size: 10px; color: var(--muted); line-height: 1.5; }
+.feedback { margin-top: 16px; margin-bottom: 0; border: 1px solid currentColor; border-radius: var(--radius); background: var(--field); color: var(--ink); font-size: 13px; line-height: 1.6; padding: 14px; }
+.feedback[data-state='error'] { color: var(--error, #ad2636); }
+.feedback:empty { display: none; }
+.endnote { display: flex; justify-content: space-between; gap: 20px; padding: 24px 0; margin: 0; font-size: 10px; letter-spacing: .06em; color: var(--muted); }
+@media (max-width: 1100px) { .shell { width: calc(100% - 56px); } }
+@media (max-width: 767px) {
+  .shell { width: calc(100% - 40px); }
+  .site-header { min-height: 84px; gap: 12px; }
+  .header-note { display: none; }
+  .header-link { font-size: 11px; }
+  .header-link span { margin-left: 10px; }
+  .eyebrow { font-size: 10px; }
+  .form-control, .form-select { font-size: 16px; }
+  .endnote { font-size: 9px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+/* HERO — tipografia pesada, grade e adesivos. */
+.site-header { min-height: 94px; border-bottom: 2px solid var(--ink); }
+.brand { font-size: 39px; font-weight: 900; letter-spacing: -.075em; }
+.brand sup { font-size: 17px; letter-spacing: 0; margin: -15px 0 0 -7px; }
+.header-note { font-family: monospace; font-size: 9px; letter-spacing: .08em; }
+.header-link { font-family: monospace; font-size: 11px; text-transform: uppercase; border-bottom: 0; }
+.street-hero { display: grid; grid-template-columns: 1.1fr 1fr; min-height: 528px; }
+.street-copy { padding: 51px 0 35px; position: relative; z-index: 1; }
+.eyebrow { font-family: monospace; font-size: 10px; letter-spacing: .12em; }
+h1 { font-size: clamp(57px, 5.9vw, 86px); font-weight: 900; letter-spacing: -.035em; line-height: .99; margin: 33px 0 25px; }
+h1 span { position: relative; display: inline-block; }
+h1 span::before { content: ''; position: absolute; z-index: -1; left: -5px; right: -9px; bottom: -4px; height: 88%; background: var(--accent); transform: rotate(-2deg); }
+.intro { font-size: 13px; line-height: 1.8; margin-bottom: 10px; }
+.hero-link { font-family: monospace; text-transform: uppercase; font-size: 10px; }
+.product-tags { display: flex; gap: 8px; margin-top: 44px; flex-wrap: wrap; }
+.product-tags span { padding: 6px 9px; border: 1px solid var(--ink); font-family: monospace; font-size: 8px; }
+.shirt-stage { position: relative; isolation: isolate; border-left: 1px solid #c8cbbb; overflow: hidden; }
+.stage-grid { position: absolute; inset: 25px 0 25px 20px; z-index: -1; background-image: linear-gradient(#a8ab991c 1px, transparent 1px), linear-gradient(90deg, #a8ab991c 1px, transparent 1px); background-size: 36px 36px; }
+.shirt-stage img { width: 100%; height: 100%; object-fit: contain; position: relative; z-index: 1; }
+.drop-stamp { position: absolute; z-index: 2; right: 6px; top: 23px; border: 2px solid var(--ink); border-radius: 50%; width: 92px; height: 92px; display: flex; flex-direction: column; align-items: center; justify-content: center; font-family: monospace; font-size: 9px; line-height: 1.1; background: var(--accent); transform: rotate(13deg); }
+.drop-stamp strong { font-size: 32px; letter-spacing: -.05em; }
+.drop-stamp span { font-size: 7px; }
+.shirt-caption { position: absolute; left: 28px; bottom: 22px; font-family: monospace; font-size: 9px; }
+.shirt-price { position: absolute; right: 0; bottom: 20px; font-size: 29px; font-weight: 900; letter-spacing: -.07em; }
+.shirt-price span { display: block; font-size: 9px; font-family: monospace; font-weight: 400; letter-spacing: 0; text-align: right; }
+.street-form { background: var(--accent); border-top: 2px solid var(--ink); border-bottom: 2px solid var(--ink); padding: 35px 0; --line: #6d7f36; --field: #efffc1; --focus: #20221c22; --muted: #46512b; }
+.street-form-inner { display: grid; grid-template-columns: .8fr 1.5fr; gap: 82px; }
+.street-form .section-label { font-family: monospace; font-size: 9px; }
+.street-form .form-title { font-size: 42px; font-weight: 900; line-height: 1; margin: 15px 0; }
+.street-form .form-description { font-size: 12px; margin-bottom: 16px; }
+.size-guide { font-family: monospace; max-width: 300px; }
+.size-guide summary { cursor: pointer; font-size: 10px; font-weight: 700; text-transform: uppercase; width: fit-content; border-bottom: 1px solid; padding-bottom: 5px; }
+.size-guide summary span { margin-left: 15px; }
+.size-guide p { margin: 12px 0 0; font-size: 11px; line-height: 1.7; }
+.street-form .form-label { font-family: monospace; font-size: 10px; text-transform: uppercase; }
+.street-form .form-control, .street-form .form-select { border-color: #85994a; min-height: 43px; }
+.street-form .form-control:focus, .street-form .form-select:focus { border-color: var(--ink); }
+.street-checkout { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; align-items: center; margin-top: 22px; }
+.street-checkout .order-summary { padding: 0; margin: 0; border: 0; }
+.street-checkout .total { font-family: var(--font-body); font-weight: 900; font-size: 29px; }
+.street-form .submit-button { --accent: #20221c; --button-ink: #d9ff43; text-transform: uppercase; font-size: 11px; }
+.street-form .demo-note { text-align: right; font-family: monospace; font-size: 8px; }
+.endnote { font-family: monospace; font-size: 9px; }
+@media (max-width: 1100px) {
+  h1 { font-size: 66px; }
+  .street-form-inner { gap: 36px; grid-template-columns: .75fr 1.5fr; }
+  .street-hero { min-height: 495px; }
+  .shirt-stage img { transform: scale(1.1); }
+}
+@media (max-width: 900px) {
+  .street-hero { grid-template-columns: 1fr 1fr; min-height: 450px; }
+  h1 { font-size: 54px; }
+  .product-tags { margin-top: 27px; }
+  .shirt-price { font-size: 24px; }
+  .shirt-caption { font-size: 7px; left: 15px; }
+  .street-form-inner { grid-template-columns: 1fr; gap: 25px; }
+  .street-form-heading { display: grid; grid-template-columns: 1fr 1fr; align-items: center; }
+  .street-form-heading .section-label { grid-column: 1 / -1; }
+  .street-form-heading .form-description { margin: 0; }
+}
+@media (max-width: 767px) {
+  .site-header { min-height: 82px; }
+  .brand { font-size: 32px; }
+  .street-hero { grid-template-columns: 1fr; }
+  .street-copy { padding: 32px 0 12px; }
+  h1 { font-size: clamp(40px, 11.8vw, 70px); margin-top: 26px; }
+  .shirt-stage { height: 375px; border-left: 0; }
+  .shirt-stage img { transform: none; }
+  .stage-grid { inset: 0 0 30px; }
+  .shirt-caption { left: 0; bottom: 10px; }
+  .shirt-price { bottom: 10px; }
+  .drop-stamp { width: 77px; height: 77px; top: 20px; }
+  .drop-stamp strong { font-size: 26px; }
+  .street-form { margin-top: 20px; padding: 26px 0; }
+  .street-form .form-title { font-size: 35px; }
+  .street-form .form-description { font-size: 11px; }
+  .street-checkout { grid-template-columns: 1fr; gap: 18px; }
+  .street-form .demo-note { text-align: center; font-size: 9px; }
+}
+
+/* Permite que colunas com textos longos encolham em telas estreitas. */
+.book-layout > *, .street-hero > *, .street-form-inner > *, .festival-layout > *, .nature-layout > *, .coffee-layout > * { min-width: 0; }

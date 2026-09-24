@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <meta content="#d9ff43" name="theme-color"/>
+    <meta content="RUÍDO — vista sua frequência. Demonstração de reserva de camisetas independentes." name="description"/>
+    <title>
+      RUÍDO® — vista sua frequência
+    </title>
+    <link href="assets/camiseta.svg" rel="icon" type="image/svg+xml"/>
+    <link href="assets/bootstrap.min.css" rel="stylesheet"/>
+    <link href="style.css" rel="stylesheet"/>
+    <script defer="" src="script.js">
+    </script>
+    <link href="account.css" rel="stylesheet"/>
+    <link href="ux-lab.css" rel="stylesheet"/>
+    <script defer="" src="../backend/client.js">
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#pedido">
+      Pular para o formulário
+    </a>
+    <header class="site-header shell">
+      <a aria-label="Ruído, início" class="brand" href="./">
+        RUÍDO
+        <sup>
+          ®
+        </sup>
+      </a>
+      <span class="header-note">
+        Roupa independente. Presença coletiva.
+      </span>
+      <nav aria-label="Navegação do site e acessos" class="nav-actions">
+        <a class="header-link" href="#pedido">
+          Garantir a minha
+          <span aria-hidden="true">
+            ↗
+          </span>
+        </a>
+        <a aria-label="Acessar administração" class="admin-link" href="admin.php">
+          Admin
+        </a>
+        <a aria-label="Login de usuários" class="profile-link" href="login.html" title="Login de usuários">
+          <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
+            <circle cx="12" cy="8" r="3.5">
+            </circle>
+            <path d="M5 21v-2a7 7 0 0 1 14 0v2" stroke-linecap="round">
+            </path>
+          </svg>
+        </a>
+      </nav>
+    </header>
+    <main>
+      <!-- HERO: título, adesivos e estampa podem ser personalizados. -->
+      <section aria-labelledby="hero-title" class="street-hero shell">
+        <div class="street-copy">
+          <div class="eyebrow">
+            Drop 001 / Sem pedir licença
+          </div>
+          <h1 id="hero-title">
+            VISTA SUA
+            <br/>
+            <span>
+              FREQUÊNCIA.
+            </span>
+          </h1>
+          <p class="intro">
+            Pra quem não nasceu pra ser paisagem.
+            <br/>
+            Algodão pesado. Corte livre. Atitude de sobra.
+          </p>
+          <a class="hero-link" href="#pedido">
+            Escolha seu próximo uniforme
+            <span aria-hidden="true">
+              ↘
+            </span>
+          </a>
+          <div class="product-tags">
+            <span>
+              100% ALGODÃO
+            </span>
+            <span>
+              MODELAGEM OVERSIZED
+            </span>
+          </div>
+        </div>
+        <div class="shirt-stage">
+          <div aria-hidden="true" class="stage-grid">
+          </div>
+          <span class="drop-stamp">
+            EDIÇÃO
+            <br/>
+            <strong>
+              001
+            </strong>
+            <span>
+              INDEPENDENTE
+            </span>
+          </span>
+          <img alt="Camiseta preta oversized com estampa verde-lima de uma estrela e a palavra RUÍDO." height="520" src="assets/camiseta.svg" width="560"/>
+          <span class="shirt-caption">
+            PEÇA 01 / PRETO + LIMA
+          </span>
+          <span class="shirt-price">
+            R$ 89
+            <span>
+              / unidade
+            </span>
+          </span>
+        </div>
+      </section>
+      <!-- FORMULÁRIO: aqui a composição é horizontal, como uma ficha de pedido. -->
+      <section aria-labelledby="form-title" class="form-panel street-form" id="pedido">
+        <div class="shell street-form-inner">
+          <div class="street-form-heading">
+            <span class="section-label">
+              Seu próximo drop
+            </span>
+            <h2 class="form-title" id="form-title">
+              BORA FAZER
+              <br/>
+              BARULHO?
+            </h2>
+            <p class="form-description">
+              Escolha a cor e o tamanho.
+              <br/>
+              Retirada no estúdio, sem frete.
+            </p>
+            <details class="size-guide">
+              <summary>
+                Guia de tamanhos
+                <span aria-hidden="true">
+                  +
+                </span>
+              </summary>
+              <p>
+                Largura × comprimento da peça, em cm: P 54×70 · M 57×73 · G 60×76 · GG 63×79. Modelagem ampla.
+              </p>
+            </details>
+          </div>
+          <form id="interest-form" novalidate="">
+            <div class="row g-3">
+              <div class="col-md-6" data-account-field>
+                <label class="form-label" for="name">
+                  Seu nome
+                </label>
+                <input aria-describedby="name-error" autocomplete="name" class="form-control" data-required="Informe seu nome para a reserva." id="name" maxlength="80" minlength="2" name="name" placeholder="Como você se chama?" required=""/>
+                <div class="invalid-feedback" id="name-error">
+                </div>
+              </div>
+              <div class="col-md-6" data-account-field>
+                <label class="form-label" for="email">
+                  E-mail
+                </label>
+                <input aria-describedby="email-error" autocomplete="email" class="form-control" data-required="Informe um e-mail para a confirmação." id="email" maxlength="120" name="email" placeholder="voce@exemplo.com" required="" type="email"/>
+                <div class="invalid-feedback" id="email-error">
+                </div>
+              </div>
+              <div class="col-6">
+                <label class="form-label" for="color">
+                  Cor da camiseta
+                </label>
+                <select aria-describedby="color-error" class="form-select" id="color" name="color" required="">
+                  <option value="preto">
+                    Preto + lima
+                  </option>
+                  <option value="offwhite">
+                    Off-white + preto
+                  </option>
+                  <option value="lima">
+                    Lima + preto
+                  </option>
+                </select>
+                <div class="invalid-feedback" id="color-error">
+                </div>
+              </div>
+              <div class="col-3">
+                <label class="form-label" for="size">
+                  Tamanho
+                </label>
+                <select aria-describedby="size-error" class="form-select" data-required="Escolha um tamanho." id="size" name="size" required="">
+                  <option value="">
+                    Selecione
+                  </option>
+                  <option value="P">
+                    P
+                  </option>
+                  <option value="M">
+                    M
+                  </option>
+                  <option value="G">
+                    G
+                  </option>
+                  <option value="GG">
+                    GG
+                  </option>
+                </select>
+                <div class="invalid-feedback" id="size-error">
+                </div>
+              </div>
+              <div class="col-3">
+                <label class="form-label" for="quantity">
+                  Qtd.
+                </label>
+                <select aria-describedby="quantity-error" class="form-select" id="quantity" name="quantity" required="">
+                  <option value="1">
+                    1
+                  </option>
+                  <option value="2">
+                    2
+                  </option>
+                  <option value="3">
+                    3
+                  </option>
+                  <option value="4">
+                    4
+                  </option>
+                </select>
+                <div class="invalid-feedback" id="quantity-error">
+                </div>
+              </div>
+            </div>
+            <div class="street-checkout">
+              <div class="order-summary">
+                <div>
+                  <span class="summary-label">
+                    TOTAL
+                  </span>
+                  <span class="summary-caption">
+                    Sem cobrança agora
+                  </span>
+                </div>
+                <output aria-live="polite" class="total" data-total="">
+                  R$ 89,00
+                </output>
+              </div>
+              <button class="btn submit-button" type="submit">
+                <span data-button-label="">
+                  Reservar meu drop
+                </span>
+                <span aria-hidden="true">
+                  ↗
+                </span>
+              </button>
+            </div>
+            <p class="demo-note">
+              Página de demonstração. Use dados fictícios. Nenhum pedido real será feito.
+            </p>
+            <div aria-atomic="true" aria-live="polite" class="alert feedback" id="form-feedback" role="status" tabindex="-1">
+            </div>
+          </form>
+        </div>
+      </section>
+      <p class="endnote shell">
+        <span>
+          RUÍDO® · FEITO PRA OCUPAR ESPAÇO.
+        </span>
+        <span>
+          Vista o que você tem a dizer.
+        </span>
+      </p>
+    </main>
+  </body>
+</html>

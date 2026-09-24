@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <meta content="#f4f0e6" name="theme-color"/>
+    <meta content="Margem — uma livraria para encontrar a sua próxima história. Demonstração de reserva de livros." name="description"/>
+    <title>
+      Margem — sua próxima história
+    </title>
+    <link href="assets/livros.svg" rel="icon" type="image/svg+xml"/>
+    <link href="assets/bootstrap.min.css" rel="stylesheet"/>
+    <link href="style.css" rel="stylesheet"/>
+    <script defer="" src="script.js">
+    </script>
+    <link href="account.css" rel="stylesheet"/>
+    <link href="ux-lab.css" rel="stylesheet"/>
+    <script defer="" src="../backend/client.js">
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#reserva">
+      Pular para o formulário
+    </a>
+    <header class="site-header shell">
+      <!-- PERSONALIZE: marca e chamada do topo. -->
+      <a aria-label="Margem, início" class="brand" href="./">
+        <span aria-hidden="true" class="brand-symbol">
+          m.
+        </span>
+        <span>
+          margem
+          <span class="brand-caption">
+            LIVRARIA INDEPENDENTE
+          </span>
+        </span>
+      </a>
+      <span class="header-note">
+        Histórias que ficam com você.
+      </span>
+      <nav aria-label="Navegação do site e acessos" class="nav-actions">
+        <a class="header-link" href="#reserva">
+          Reserve um livro
+          <span aria-hidden="true">
+            ↗
+          </span>
+        </a>
+        <a aria-label="Acessar administração" class="admin-link" data-admin-only hidden href="admin.php">
+          Admin
+        </a>
+        <a aria-label="Login de usuários" class="profile-link" href="login.html" title="Login de usuários">
+          <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
+            <circle cx="12" cy="8" r="3.5">
+            </circle>
+            <path d="M5 21v-2a7 7 0 0 1 14 0v2" stroke-linecap="round">
+            </path>
+          </svg>
+        </a>
+      </nav>
+    </header>
+    <main class="shell">
+      <div class="book-layout">
+        <!-- HERO: experimente mudar a hierarquia entre título, livro e preço. -->
+        <section aria-labelledby="hero-title" class="book-hero">
+          <div class="eyebrow">
+            Uma pausa. Uma boa história.
+          </div>
+          <h1 id="hero-title">
+            O próximo
+            <br/>
+            capítulo começa
+            <br/>
+            <em>
+              por aqui.
+            </em>
+          </h1>
+          <p class="intro">
+            Desacelere o mundo lá fora. Encontre uma leitura para se perder — e um pouco de você para encontrar.
+          </p>
+          <a class="hero-link" href="#reserva">
+            Escolha sua próxima leitura
+            <span aria-hidden="true">
+              ↗
+            </span>
+          </a>
+          <div class="book-showcase">
+            <div class="curator-note">
+              <span aria-hidden="true" class="small-star">
+                ✳
+              </span>
+              <p>
+                Escolhidos a dedo.
+                <br/>
+                Lidos com o coração.
+              </p>
+              <span aria-hidden="true" class="hand-arrow">
+                ⤵
+              </span>
+            </div>
+            <img alt="Três livros ilustrados: O jardim das pequenas coisas, Atlas dos dias e A arte de reparar." height="360" src="assets/livros.svg" width="560"/>
+            <span class="edition">
+              01 — SELEÇÃO DA CASA
+            </span>
+          </div>
+        </section>
+        <!-- FORMULÁRIO: edite opções também em CONFIG, no script.js. -->
+        <section aria-labelledby="form-title" class="form-panel book-form" id="reserva">
+          <div class="form-topline">
+            <span class="section-label">
+              Seu livro está aqui
+            </span>
+            <span class="step">
+              Reserva para retirada
+            </span>
+          </div>
+          <h2 class="form-title" id="form-title">
+            Guarde uma história.
+          </h2>
+          <p class="form-description">
+            Escolha seu livro e retire na livraria em até 2 dias. O pagamento seria feito na retirada.
+          </p>
+          <form id="interest-form" novalidate="">
+            <div class="row g-3">
+              <div class="col-12" data-account-field>
+                <label class="form-label" for="name">
+                  Como podemos chamar você?
+                </label>
+                <input aria-describedby="name-error" autocomplete="name" class="form-control" data-required="Conte seu nome para identificarmos a reserva." id="name" maxlength="80" minlength="2" name="name" placeholder="Seu nome" required=""/>
+                <div class="invalid-feedback" id="name-error">
+                </div>
+              </div>
+              <div class="col-12" data-account-field>
+                <label class="form-label" for="email">
+                  Seu e-mail
+                </label>
+                <input aria-describedby="email-error" autocomplete="email" class="form-control" data-required="Informe um e-mail para a confirmação." id="email" maxlength="120" name="email" placeholder="voce@exemplo.com" required="" type="email"/>
+                <div class="invalid-feedback" id="email-error">
+                </div>
+              </div>
+              <div class="col-8">
+                <label class="form-label" for="book">
+                  Qual vai ser a leitura?
+                </label>
+                <select aria-describedby="book-error" class="form-select" id="book" name="book" required="">
+                  <option value="jardim">
+                    O jardim das pequenas coisas
+                  </option>
+                  <option value="atlas">
+                    Atlas dos dias
+                  </option>
+                  <option value="reparar">
+                    A arte de reparar
+                  </option>
+                </select>
+                <div class="invalid-feedback" id="book-error">
+                </div>
+              </div>
+              <div class="col-4">
+                <label class="form-label" for="quantity">
+                  Quantidade
+                </label>
+                <select aria-describedby="quantity-error" class="form-select" id="quantity" name="quantity" required="">
+                  <option value="1">
+                    1 livro
+                  </option>
+                  <option value="2">
+                    2 livros
+                  </option>
+                  <option value="3">
+                    3 livros
+                  </option>
+                  <option value="4">
+                    4 livros
+                  </option>
+                </select>
+                <div class="invalid-feedback" id="quantity-error">
+                </div>
+              </div>
+              <div class="col-12">
+                <label class="form-label" for="note">
+                  Algum detalhe?
+                  <span class="optional">
+                    (opcional)
+                  </span>
+                </label>
+                <textarea aria-describedby="note-error" class="form-control" id="note" maxlength="240" name="note" placeholder="É para presente? Conte pra gente." rows="2"></textarea>
+                <div class="invalid-feedback" id="note-error">
+                </div>
+              </div>
+            </div>
+            <div class="order-summary">
+              <div>
+                <span class="summary-label">
+                  Total da reserva
+                </span>
+                <span class="summary-caption">
+                  Retirada gratuita · sem cobrança online
+                </span>
+              </div>
+              <output aria-live="polite" class="total" data-total="">
+                R$ 48,00
+              </output>
+            </div>
+            <!-- DESAFIO: como o texto do botão pode deixar o próximo passo mais claro? -->
+            <button class="btn submit-button" type="submit">
+              <span data-button-label="">
+                Reservar minha leitura
+              </span>
+              <span aria-hidden="true">
+                ↗
+              </span>
+            </button>
+            <p class="demo-note">
+              Página de demonstração. Use dados fictícios.
+            </p>
+            <div aria-atomic="true" aria-live="polite" class="alert feedback" id="form-feedback" role="status" tabindex="-1">
+            </div>
+          </form>
+        </section>
+      </div>
+      <p class="endnote">
+        <span>
+          MARGEM · LIVROS, ENCONTROS E TEMPO.
+        </span>
+        <span>
+          Feito para ler com calma.
+        </span>
+      </p>
+    </main>
+  </body>
+</html>

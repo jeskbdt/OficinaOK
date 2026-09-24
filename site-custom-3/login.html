@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <meta content="#18151f" name="theme-color"/>
+    <title>
+      Login · PULSO
+    </title>
+    <link href="assets/disco.svg" rel="icon" type="image/svg+xml"/>
+    <link href="assets/bootstrap.min.css" rel="stylesheet"/>
+    <link href="style.css" rel="stylesheet"/>
+    <link href="account.css" rel="stylesheet"/>
+    <script defer="" src="account.js">
+    </script>
+    <script defer="" src="../backend/client.js">
+    </script>
+  </head>
+  <body class="account-page login-page">
+    <a class="skip-link" href="#main-content">
+      Pular para o conteúdo
+    </a>
+    <header class="site-header shell account-header">
+      <a aria-label="Pulso, início" class="brand" href="./">
+        <span aria-hidden="true" class="pulse-icon">
+          ϟ
+        </span>
+        PULSO
+        <span class="brand-year">
+          /26
+        </span>
+      </a>
+      <span class="header-note">
+        Login / PULSO
+      </span>
+      <nav aria-label="Navegação do site e acessos" class="nav-actions">
+        <a class="header-link" href="index.html">
+          Voltar ao site
+          <span aria-hidden="true">
+            ↗
+          </span>
+        </a>
+        <a aria-label="Acessar administração" class="admin-link" data-admin-only hidden href="admin.php">
+          Admin
+        </a>
+        <a aria-current="page" aria-label="Login de usuários" class="profile-link" href="login.html" title="Login de usuários">
+          <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
+            <circle cx="12" cy="8" r="3.5">
+            </circle>
+            <path d="M5 21v-2a7 7 0 0 1 14 0v2" stroke-linecap="round">
+            </path>
+          </svg>
+        </a>
+      </nav>
+    </header>
+    <main class="login-layout shell" id="main-content">
+      <section aria-labelledby="login-title" class="login-story">
+        <div class="eyebrow">
+          Bom ter você por aqui
+        </div>
+        <h1 id="login-title">
+          Sua entrada para
+          <br/>
+          <em>
+            o próximo encontro.
+          </em>
+        </h1>
+        <p class="intro">
+          Entre na sua conta para acompanhar seus ingressos e se preparar para o festival.
+        </p>
+        <img alt="Ilustração da identidade visual de PULSO" class="login-art" height="360" src="assets/disco.svg" width="560"/>
+      </section>
+      <section aria-labelledby="form-title" class="login-card">
+        <p class="section-label">
+          Seu espaço / PULSO
+        </p>
+        <h2 id="form-title">
+          Entre, fique à vontade.
+        </h2>
+        <p class="form-description">
+          Acesse sua conta para acompanhar suas atividades no site.
+        </p>
+        <!-- Login enviado como JSON pelo backend/client.js; senhas nunca vão na URL. -->
+        <form action="login.html" aria-describedby="login-demo" id="login-form" method="post" novalidate="">
+          <div class="mb-4">
+            <label class="form-label" for="login-email">
+              E-mail
+            </label>
+            <input autocomplete="username" class="form-control" id="login-email" placeholder="voce@exemplo.com" type="email"/>
+          </div>
+          <div>
+            <label class="form-label" for="login-password">
+              Senha
+            </label>
+            <div class="password-field">
+              <input autocomplete="current-password" class="form-control" id="login-password" placeholder="Sua senha" type="password"/>
+              <button aria-controls="login-password" aria-pressed="false" class="password-toggle" id="toggle-password" type="button">
+                Mostrar
+              </button>
+            </div>
+          </div>
+          <button class="btn submit-button" type="submit">
+            <span>
+              Entrar na minha conta
+            </span>
+            <span aria-hidden="true">
+              ↗
+            </span>
+          </button>
+          <p class="demo-note" id="login-demo">
+            Laboratório: use uma das contas fictícias fornecidas pelo professor. O acesso administrativo depende do perfil da conta.
+          </p>
+          <p aria-live="polite" class="feedback" id="login-feedback" role="status" tabindex="-1">
+          </p>
+        </form>
+        <a class="account-back" href="index.html">
+          ← Voltar para PULSO
+        </a>
+      </section>
+    </main>
+    <footer class="account-footer shell">
+      <span>
+        PULSO · Feito para conectar.
+      </span>
+      <span>
+        Oficina · dados fictícios
+      </span>
+    </footer>
+  </body>
+</html>

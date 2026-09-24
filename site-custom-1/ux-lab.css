@@ -1,0 +1,10 @@
+/* FALHA DIDÁTICA — contraste insuficiente no formulário.
+   Textos e valores quase se confundem com o fundo.
+   Remova este stylesheet do index.html para comparar com a versão original. */
+.book-form {
+  --ink: #e3dfd4;
+  --muted: #e3dfd4;
+  --field: #f9f7f1;
+  color: var(--ink);
+  background: #f4f1e8;
+}

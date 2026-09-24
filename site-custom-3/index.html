@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <meta content="#18151f" name="theme-color"/>
+    <meta content="PULSO — a cidade no mesmo ritmo. Página demonstrativa de inscrição em um festival de música." name="description"/>
+    <title>
+      PULSO — sinta a cidade vibrar
+    </title>
+    <link href="assets/disco.svg" rel="icon" type="image/svg+xml"/>
+    <link href="assets/bootstrap.min.css" rel="stylesheet"/>
+    <link href="style.css" rel="stylesheet"/>
+    <script defer="" src="script.js">
+    </script>
+    <link href="account.css" rel="stylesheet"/>
+    <link href="ux-lab.css" rel="stylesheet"/>
+    <script defer="" src="../backend/client.js">
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#ingressos">
+      Pular para o formulário
+    </a>
+    <header class="site-header shell">
+      <a aria-label="Pulso, início" class="brand" href="./">
+        <span aria-hidden="true" class="pulse-icon">
+          ϟ
+        </span>
+        PULSO
+        <span class="brand-year">
+          /26
+        </span>
+      </a>
+      <span class="header-note">
+        Música independente. Energia coletiva.
+      </span>
+      <nav aria-label="Navegação do site e acessos" class="nav-actions">
+        <a class="header-link" href="#ingressos">
+          Entre no ritmo
+          <span aria-hidden="true">
+            ↗
+          </span>
+        </a>
+        <a aria-label="Acessar administração" class="admin-link" data-admin-only hidden href="admin.php">
+          Admin
+        </a>
+        <a aria-label="Login de usuários" class="profile-link" href="login.html" title="Login de usuários">
+          <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
+            <circle cx="12" cy="8" r="3.5">
+            </circle>
+            <path d="M5 21v-2a7 7 0 0 1 14 0v2" stroke-linecap="round">
+            </path>
+          </svg>
+        </a>
+      </nav>
+    </header>
+    <main class="shell">
+      <div class="festival-layout">
+        <!-- HERO: a tipografia faz parte da identidade do festival. -->
+        <section aria-labelledby="hero-title" class="festival-hero">
+          <div class="eyebrow">
+            18 de outubro de 2026 · São Paulo
+          </div>
+          <h1 id="hero-title">
+            A CIDADE
+            <br/>
+            NO MESMO
+            <br/>
+            <span>
+              RITMO.
+            </span>
+          </h1>
+          <p class="intro">
+            Um encontro de sons, pessoas e novas frequências. Vem sentir o que acontece quando a música conecta.
+          </p>
+          <div aria-label="Estilos musicais" class="genre-list">
+            <span>
+              INDIE
+            </span>
+            <span>
+              ELETRÔNICA
+            </span>
+            <span>
+              BRASILIDADES
+            </span>
+          </div>
+          <div class="record-stage">
+            <img alt="Disco de vinil roxo com centro laranja e ondas sonoras ao redor." height="370" src="assets/disco.svg" width="580"/>
+            <div class="record-caption">
+              <span>
+                VOLUME ALTO.
+                <br/>
+                MENTE ABERTA.
+              </span>
+              <span aria-hidden="true">
+                ↗
+              </span>
+            </div>
+          </div>
+          <div class="event-meta">
+            <div>
+              <span>
+                QUANDO
+              </span>
+              <strong>
+                18 OUT · 16H ÀS 23H
+              </strong>
+            </div>
+            <div>
+              <span>
+                ONDE
+              </span>
+              <strong>
+                FÁBRICA 8 · SÃO PAULO
+              </strong>
+            </div>
+            <span aria-hidden="true" class="event-star">
+              ✳
+            </span>
+          </div>
+        </section>
+        <!-- FORMULÁRIO: um ingresso visual com resumo de valores em tempo real. -->
+        <section aria-labelledby="form-title" class="form-panel ticket-panel" id="ingressos">
+          <div class="ticket-content">
+            <div class="form-topline">
+              <span class="section-label">
+                Passaporte para o som
+              </span>
+              <span aria-hidden="true" class="ticket-dot">
+              </span>
+            </div>
+            <h2 class="form-title" id="form-title">
+              Seu lugar nessa
+              <br/>
+              frequência.
+            </h2>
+            <p class="form-description">
+              Escolha seu ingresso e faça uma reserva. É só chegar com vontade de viver o agora.
+            </p>
+            <form id="interest-form" novalidate="">
+              <div class="row g-3">
+                <div class="col-12" data-account-field>
+                  <label class="form-label" for="name">
+                    Seu nome
+                  </label>
+                  <input aria-describedby="name-error" autocomplete="name" class="form-control" data-required="Informe seu nome para identificar o ingresso." id="name" maxlength="80" minlength="2" name="name" placeholder="Quem vem pro Pulso?" required=""/>
+                  <div class="invalid-feedback" id="name-error">
+                  </div>
+                </div>
+                <div class="col-12" data-account-field>
+                  <label class="form-label" for="email">
+                    E-mail
+                  </label>
+                  <input aria-describedby="email-error" autocomplete="email" class="form-control" data-required="Informe um e-mail para a confirmação." id="email" maxlength="120" name="email" placeholder="voce@exemplo.com" required="" type="email"/>
+                  <div class="invalid-feedback" id="email-error">
+                  </div>
+                </div>
+                <div class="col-8">
+                  <label class="form-label" for="ticket">
+                    Sua experiência
+                  </label>
+                  <select aria-describedby="ticket-error" class="form-select" id="ticket" name="ticket" required="">
+                    <option value="pista">
+                      Pista · R$ 120
+                    </option>
+                    <option value="meia">
+                      Pista / meia · R$ 60
+                    </option>
+                    <option value="lounge">
+                      Lounge · R$ 220
+                    </option>
+                  </select>
+                  <div class="invalid-feedback" id="ticket-error">
+                  </div>
+                </div>
+                <div class="col-4">
+                  <label class="form-label" for="quantity">
+                    Ingressos
+                  </label>
+                  <select aria-describedby="quantity-error" class="form-select" id="quantity" name="quantity" required="">
+                    <option value="1">
+                      1
+                    </option>
+                    <option value="2">
+                      2
+                    </option>
+                    <option value="3">
+                      3
+                    </option>
+                    <option value="4">
+                      4
+                    </option>
+                  </select>
+                  <div class="invalid-feedback" id="quantity-error">
+                  </div>
+                </div>
+                <div class="col-12">
+                  <p class="field-help mb-0">
+                    Meia: apresente comprovante na entrada. Lounge: acesso à pista e área elevada.
+                  </p>
+                </div>
+                <div class="col-12">
+                  <label class="form-label" for="note">
+                    Uma observação?
+                    <span class="optional">
+                      (opcional)
+                    </span>
+                  </label>
+                  <input aria-describedby="note-error" class="form-control" id="note" maxlength="240" name="note" placeholder="Algo sobre sua reserva"/>
+                  <div class="invalid-feedback" id="note-error">
+                  </div>
+                </div>
+              </div>
+              <div class="order-summary">
+                <div>
+                  <span class="summary-label">
+                    Total ·
+                    <span data-selection="">
+                      Pista
+                    </span>
+                  </span>
+                  <span class="summary-caption">
+                    Valor final, sem taxas adicionais
+                  </span>
+                </div>
+                <output aria-live="polite" class="total" data-total="">
+                  R$ 120,00
+                </output>
+              </div>
+              <button class="btn submit-button" type="submit">
+                <span data-button-label="">
+                  Quero estar lá
+                </span>
+                <span aria-hidden="true">
+                  ↗
+                </span>
+              </button>
+              <p class="demo-note">
+                Festival fictício. A reserva é apenas uma simulação.
+              </p>
+              <div aria-atomic="true" aria-live="polite" class="alert feedback" id="form-feedback" role="status" tabindex="-1">
+              </div>
+            </form>
+          </div>
+          <div aria-hidden="true" class="ticket-stub">
+            <span>
+              PULSO / ADMIT
+              <span data-quantity="">
+                01
+              </span>
+              <small>
+                18.10.26 — SÃO PAULO
+              </small>
+            </span>
+            <div class="barcode">
+            </div>
+          </div>
+        </section>
+      </div>
+      <p class="endnote">
+        <span>
+          PULSO © 2026 · A GENTE SE ENCONTRA NO SOM.
+        </span>
+        <span>
+          Boas vibrações, sempre.
+        </span>
+      </p>
+    </main>
+  </body>
+</html>
